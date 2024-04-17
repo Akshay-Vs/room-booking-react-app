@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🚀 Styling, Testing, and building the project before committing 🛠️"
+
+npm run check-types || 
+(
+  echo "❌ Type checking failed"
+  false;
+)
+
+npm run check-format || 
+(
+  echo "❌ Format checking failed"
+  echo "Running auto format (fix)"
+  npm run format || 
+  (
+    echo "❌ Format auto-fixing failed"
+    false
+  )
+  false
+)
+
+#if everything is working
+echo "✅ Tests passed successfully"
