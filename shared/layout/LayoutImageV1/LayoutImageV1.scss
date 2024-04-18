@@ -1,9 +1,13 @@
 .layout-image-v1 {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 
-  padding: 24px 64px;
+  padding: 38px 64px;
+
+  @media screen and (max-width: 720px) {
+    padding: 28px 48px;
+  }
 
   &__image {
     width: 48%;

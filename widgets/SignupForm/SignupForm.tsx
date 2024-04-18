@@ -3,6 +3,7 @@ import { LayoutImageV1 } from '@/shared/layout';
 import Link from 'next/link';
 import React from 'react';
 import Image from '@/assets/images/bed-room-1.png';
+import FormData from './FormData';
 
 const SignupForm = () => {
   return (
@@ -13,22 +14,22 @@ const SignupForm = () => {
             variant="h5"
             className="opacity-85 w-full text-start"
           >
-            Login
+            Sign Up
           </Typography.Heading>
         </Typography>
 
-        {}
+        <FormData />
         <Typography className="mt-14">
           <Typography.Heading
             variant="h7"
             className="flex flex-col justify-center w-full px-5 sm:flex-row sm:items-center sm:justify-start"
           >
-            Don&apos;t have an account?{' '}
+            Already have an account?{' '}
             <Link
-              href="signup"
+              href="login"
               className="mx-1 underline-offset-2 underline text-start sm:text-center"
             >
-              Sign up now
+              Login
             </Link>
           </Typography.Heading>
         </Typography>
