@@ -1,0 +1,32 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+
+@mixin _button {
+  @include font-primary(24px, 400);
+  padding: 12px 24px;
+  border-radius: 32px;
+
+  min-width: 240px;
+  color: $background-color;
+  transition: all 300ms ease-in-out;
+}
+.button {
+  &__primary {
+    @include _button;
+    background: $primary-color;
+    background: linear-gradient(
+      90deg,
+      darken($primary-color, 0%) 0%,
+      darken($primary-color, 16%) 50%,
+      darken($primary-color, 5%) 100%
+    );
+
+    &:hover {
+      box-shadow: darken($primary-color, 60%) 0px 0px 4px;
+    }
+  }
+
+  &__secondary {
+    @include _button;
+  }
+}

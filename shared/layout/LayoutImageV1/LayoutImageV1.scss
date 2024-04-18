@@ -1,0 +1,16 @@
+.layout-image-v1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 24px 64px;
+
+  &__image {
+    width: 48%;
+    height: 100%;
+    border-radius: 52px;
+    padding: 8px 0;
+    object-fit: cover;
+    object-position: center;
+  }
+}

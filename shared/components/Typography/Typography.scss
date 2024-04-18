@@ -1,0 +1,49 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+
+.typography {
+  &__heading {
+    @include font-primary();
+    margin: 0;
+
+    &--h1 {
+      font-size: 92px;
+      color: $text-color;
+    }
+
+    &--h2 {
+      font-size: 72px;
+      color: $text-color;
+    }
+
+    &--h3 {
+      font-size: 54px;
+      color: $text-color;
+    }
+
+    &--h4 {
+      font-size: 42px;
+      color: $text-color;
+    }
+
+    &--h5 {
+      font-size: 34px;
+      color: $text-color;
+    }
+
+    &--h6 {
+      font-size: 22px;
+      color: $text-color;
+    }
+
+    &--h7 {
+      font-size: 18px;
+      color: $text-color;
+    }
+
+    &--h8 {
+      font-size: 16px;
+      color: $text-color;
+    }
+  }
+}

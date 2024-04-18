@@ -1,0 +1,25 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+
+.text-input {
+  &__input-primary {
+    @include font-primary(22px, 400);
+    padding: 14px 28px;
+    border-radius: 32px;
+
+    width: 100%;
+
+    color: lighten($color: $text-color, $amount: 20%);
+    border: $shade-color 2px solid;
+    transition: all 300ms ease-in-out;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+    }
+
+    &::placeholder {
+      font-size: 20px;
+    }
+  }
+}
