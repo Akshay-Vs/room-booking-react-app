@@ -24,6 +24,10 @@
     &:hover {
       box-shadow: darken($primary-color, 60%) 0px 0px 4px;
     }
+
+    @media screen and (max-width: 768px) {
+      min-width: 120%;
+    }
   }
 
   &__secondary {

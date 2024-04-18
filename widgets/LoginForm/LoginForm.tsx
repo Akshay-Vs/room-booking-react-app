@@ -23,10 +23,13 @@ const LoginForm = () => {
         <Typography className="mt-14">
           <Typography.Heading
             variant="h7"
-            className="flex justify-center w-full px-5"
+            className="flex flex-col justify-center w-full px-5 sm:flex-row sm:items-center sm:justify-start"
           >
             Don&apos;t have an account?{' '}
-            <Link href="signup" className="mx-1 underline-offset-2 underline">
+            <Link
+              href="signup"
+              className="mx-1 underline-offset-2 underline text-start sm:text-center"
+            >
               Sign up now
             </Link>
           </Typography.Heading>

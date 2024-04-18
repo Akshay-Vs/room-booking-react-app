@@ -14,7 +14,7 @@ const LayoutImageV1 = ({ children, image }: ILayoutImageProps) => {
     <div className="layout-image-v1 h-full w-full">
       <div className="h-full flex flex-col">
         <LogoLarge />
-        <div className="flex flex-col justify-center items-center h-full pb-14">
+        <div className="flex flex-col justify-center items-center h-full pb-14 pt-0">
           {children}
         </div>
       </div>
