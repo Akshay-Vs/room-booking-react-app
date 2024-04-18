@@ -8,7 +8,7 @@ import FormData from './FormData';
 const SignupForm = () => {
   return (
     <LayoutImageV1 image={Image}>
-      <div className="mt-10 flex justify-center items-center flex-col h-full">
+      <div className="mt-10 flex justify-center items-center flex-col h-full w-full">
         <Typography className="m-3 mb-7 flex w-full">
           <Typography.Heading
             variant="h5"
