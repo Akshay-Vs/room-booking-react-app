@@ -28,9 +28,9 @@ const LoginInputs = () => {
   };
 
   return (
-    <div>
+    <div className="w-full h-full">
       <form
-        className="w-[100%] h-full flex flex-col justify-center items-center gap-8 mt-2"
+        className="w-full h-full flex flex-col justify-center items-center gap-8 mt-2"
         onSubmit={handleSubmit}
       >
         <TextInputPrimary

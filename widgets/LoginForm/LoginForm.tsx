@@ -8,7 +8,7 @@ import Link from 'next/link';
 const LoginForm = () => {
   return (
     <LayoutImageV1 image={Image}>
-      <div className="mt-10 flex justify-center items-start flex-col h-full">
+      <div className="mt-10 flex justify-center items-start flex-col h-full w-full md:w-[70%]">
         <Typography className="m-3 mb-7 flex w-full">
           <Typography.Heading
             variant="h5"
