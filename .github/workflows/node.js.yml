@@ -22,8 +22,12 @@ jobs:
     - name: Build the app
       run: cd server && yarn build
 
-    - name: Store the dist
+    - name: Archive production artifact
+      working-directory: server
+      run: tar -czf dist.tar.gz dist
+
+    - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
         name: dist
-        path: server/dist
+        path: dist.tar.gz
