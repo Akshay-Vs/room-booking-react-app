@@ -1,14 +1,13 @@
-import { LayoutImageV1 } from '@/shared/layout';
-import React from 'react';
-import FormData from './FormData';
-import Image from '@/assets/images/bed-room-1.png';
 import { Typography } from '@/shared/components';
+import { LayoutImageV1 } from '@/shared/layout';
 import Link from 'next/link';
+import React from 'react';
+import Image from '@/assets/images/bed-room-1.png';
 
-const LoginForm = () => {
+const SignupForm = () => {
   return (
     <LayoutImageV1 image={Image}>
-      <div className="mt-10 flex justify-center items-start flex-col h-full">
+      <div className="mt-10 flex justify-center items-center flex-col h-full">
         <Typography className="m-3 mb-7 flex w-full">
           <Typography.Heading
             variant="h5"
@@ -18,8 +17,7 @@ const LoginForm = () => {
           </Typography.Heading>
         </Typography>
 
-        <FormData />
-
+        {}
         <Typography className="mt-14">
           <Typography.Heading
             variant="h7"
@@ -39,4 +37,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default SignupForm;

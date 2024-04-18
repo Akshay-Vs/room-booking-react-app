@@ -2,7 +2,11 @@ import { LoginForm } from '@/widgets';
 import React from 'react';
 
 const page = () => {
-  return <LoginForm />;
+  return (
+    <main>
+      <LoginForm />
+    </main>
+  );
 };
 
 export default page;

@@ -12,9 +12,9 @@ interface ILayoutImageProps extends IChildren {
 const LayoutImageV1 = ({ children, image }: ILayoutImageProps) => {
   return (
     <div className="layout-image-v1 h-full w-full">
-      <div className="h-full flex flex-col">
+      <div className="h-full flex flex-col w-full">
         <LogoLarge />
-        <div className="flex flex-col justify-center items-center h-full pb-14 pt-0">
+        <div className="flex flex-col justify-start items-start h-full w-full pb-14 pt-0">
           {children}
         </div>
       </div>
