@@ -2,9 +2,15 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 echo "Running all tests before pushing 🚀"
-npm run build || 
+yarn build || 
 (
-  echo "❌ Build Failed"
+  echo "❌ Next Js Build Failed"
+  false;
+)
+
+cd server && yarn build || 
+(
+  echo "❌ Server Build Failed"
   false;
 )
 
