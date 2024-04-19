@@ -1,31 +1,42 @@
 'use client';
 import { Button, TextInputPrimary, Typography } from '@/shared/components';
-import { loginSchema } from '@/shared/validation/LoginFormValidation';
-import Link from 'next/link';
-import { abort } from 'process';
+import { loginUser, registerUser } from '@/shared/services';
 import React, { useState } from 'react';
 
 const LoginInputs = () => {
   const [fullName, setFullName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  // const [error, setError] = useState<string>('hai');
-
+  const [error, setError] = useState<string>('');
   const handleInputChange = async (
     text: string,
     setValue: React.Dispatch<React.SetStateAction<string>>
   ) => {
-    // try {
-    //   await loginSchema.validate({ email, password }, { abortEarly: false });
-    //   setError('');
-    // } catch (err: any) {
-    //   setError(err);
-    // }
     setValue(text);
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const res: any = await registerUser({
+      name: fullName,
+      email: email,
+      password: password,
+    });
+
+    if (res.status === 201) {
+      loginUser({
+        name: fullName,
+        email: email,
+        password: password,
+      });
+      return (location.href = '/');
+    }
+
+    console.log('Response', res.status);
+    setError(res.message);
+    setTimeout(() => {
+      setError('');
+    }, 2000);
   };
 
   return (
@@ -71,14 +82,13 @@ const LoginInputs = () => {
           }}
         />
         <Button className="w-full">Create Account</Button>
-      </form>
-      {/* {error && (
-        <Typography className="w-full flex flex-col">
-          <Typography.Paragraph className="flex justify-center w-full px-5 text-red-600">
+
+        {error && (
+          <Typography.Paragraph className="flex justify-center w-full px-5 m-0 text-xl text-red-600">
             {error}
           </Typography.Paragraph>
-        </Typography>
-      )} */}
+        )}
+      </form>
     </div>
   );
 };

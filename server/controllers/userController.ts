@@ -2,6 +2,7 @@ import asyncHandler from 'express-async-handler';
 import User from '../models/userModel';
 import generateToken from '../utils/generateToken';
 import { IRequest } from '../interfaces/IRequest';
+import logger from '../utils/logger';
 
 //@dest  Register  user
 //#route  POST /api/users/
@@ -28,6 +29,7 @@ const registerUser = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
     });
+    logger('New user registered', 'info');
   } else {
     res.status(400);
     throw new Error('Invalid user data');
@@ -48,6 +50,7 @@ const authUser = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
     });
+    logger('A user logged in', 'info');
   } else {
     res.status(401);
     throw new Error('Invalid email or password');
