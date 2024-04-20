@@ -8,7 +8,7 @@ const LogoLarge = () => {
   return (
     <Typography>
       <Typography.Heading variant="h3" className="primary-color mt-0">
-        <FontAwesomeIcon icon={faFeather} /> SheNest
+        <FontAwesomeIcon icon={faFeather} /> SheShare
       </Typography.Heading>
     </Typography>
   );

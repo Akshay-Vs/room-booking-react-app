@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 const LocationCard = () => {
   return (
-    <div className="mx-5 sm:mx-[5%] p-0 sm:p-10">
+    <div className="mx-5 sm:mx-[7%]">
       <LayoutImageV2 image={Image}>
         <div className="flex flex-col h-full">
           <Typography.Heading variant="h3">
