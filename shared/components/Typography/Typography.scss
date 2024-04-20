@@ -4,31 +4,59 @@
 .typography {
   &__heading {
     @include font-primary();
-    margin: 0;
+
+    &--h1,
+    &--h2,
+    &--h3,
+    &--h4,
+    &--h5,
+    &--h6,
+    &--h7,
+    &--h8 {
+      font-weight: 400;
+    }
 
     &--h1 {
       font-size: 92px;
       color: $text-color;
+
+      @media screen and (max-width: 768px) {
+        font-size: 82px;
+      }
     }
 
     &--h2 {
       font-size: 72px;
       color: $text-color;
+
+      @media screen and (max-width: 768px) {
+        font-size: 62px;
+      }
     }
 
     &--h3 {
       font-size: 54px;
       color: $text-color;
+
+      @media screen and (max-width: 768px) {
+        font-size: 46px;
+      }
     }
 
     &--h4 {
       font-size: 42px;
       color: $text-color;
+      @media screen and (max-width: 768px) {
+        font-size: 38px;
+      }
     }
 
     &--h5 {
       font-size: 34px;
       color: $text-color;
+      @media screen and (max-width: 768px) {
+        font-size: 28px;
+      }
     }
 
     &--h6 {
