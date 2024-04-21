@@ -11,6 +11,14 @@ interface ITextInputProps extends IExtendablesWithChildren<HTMLInputElement> {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
+interface ITextAreaProps extends IExtendablesWithChildren<HTMLTextAreaElement> {
+  placeholder?: string;
+  type?: string;
+  props?: React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+}
+
 export const TextInputPrimary = ({
   className,
   placeholder,
@@ -23,6 +31,25 @@ export const TextInputPrimary = ({
     <input
       type={type}
       className={`text-input__input-primary ${className}`}
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+      {...props}
+    />
+  );
+};
+
+export const TextAreaInput = ({
+  className,
+  placeholder,
+  value,
+  onChange,
+  props,
+  type = 'text',
+}: ITextAreaProps) => {
+  return (
+    <textarea
+      className={`text-input__input-area ${className}`}
       placeholder={placeholder}
       value={value}
       onChange={onChange}

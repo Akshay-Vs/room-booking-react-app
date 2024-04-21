@@ -2,7 +2,8 @@
 @import '../../styles/typography.scss';
 
 .text-input {
-  &__input-primary {
+  &__input-primary,
+  &__input-area {
     @include font-primary(22px, 400);
     padding: 14px 28px;
     border-radius: 32px;
@@ -27,6 +28,9 @@
     }
   }
 
+  &__input-area {
+    font-size: 20px;
+  }
   &__input-logo {
     @include font-primary(22px, 400);
     border-radius: 32px;

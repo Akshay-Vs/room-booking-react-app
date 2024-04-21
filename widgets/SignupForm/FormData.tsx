@@ -17,6 +17,11 @@ const LoginInputs = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    localStorage.setItem('fullName', fullName);
+    localStorage.setItem('email', email);
+    localStorage.setItem('isLogged', 'true');
+
     const res: any = await registerUser({
       name: fullName,
       email: email,

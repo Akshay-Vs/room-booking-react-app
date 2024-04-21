@@ -25,6 +25,9 @@ const LoginInputs = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    localStorage.setItem('email', email);
+    localStorage.setItem('isLogged', 'true');
   };
 
   return (
