@@ -49,10 +49,35 @@
 
 .layout-image--v2 {
   background: #f8fafc;
-  border-radius: 38px;
   border-radius: 52px;
   margin: 24px 0px;
   @media screen and (max-width: 720px) {
     padding: 18px 38px;
+  }
+}
+
+.layout-image--v3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 30px;
+  padding: 0px 64px;
+
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    padding: 0;
+  }
+  &__image-v3 {
+    width: 42%;
+    height: 80vh;
+    border-radius: 52px;
+    padding: 8px 0;
+    object-fit: cover;
+    object-position: center;
+
+    @media screen and (max-width: 1268px) {
+      margin-left: 18px;
+      width: 100%;
+    }
   }
 }
