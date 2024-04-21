@@ -1,4 +1,5 @@
 import { loginUser } from './loginUser';
 import { registerUser } from './registerUser';
+import { getDealByCity } from './getDealByCity';
 
-export { loginUser, registerUser };
+export { loginUser, registerUser, getDealByCity };

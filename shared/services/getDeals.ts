@@ -1,15 +1,7 @@
-export type DealItem = {
-  id: string;
-  name: string;
-  price: string;
-  image: string;
-  city: string;
-  state: string;
-  isLiked: boolean;
-};
+import { IProduct } from '../interfaces/IProduct';
 
 export const getDeals = async () => {
-  const data: DealItem[] = [
+  const data: IProduct[] = [
     {
       id: '86759675',
       name: 'Surfside Retreat',

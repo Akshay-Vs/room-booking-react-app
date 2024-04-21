@@ -8,6 +8,7 @@ import {
 } from '@/shared/components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import LocationSearch from '@/shared/components/LocationSearch/LocationSearch';
 const LocationCard = () => {
   return (
     <div className="mx-5 sm:mx-[7%]">
@@ -31,6 +32,8 @@ const LocationCard = () => {
               <FontAwesomeIcon icon={faSearch} className="pr-5" />
             </TextInputWithLogo>
           </div>
+
+          <LocationSearch />
         </div>
       </LayoutImageV2>
     </div>
