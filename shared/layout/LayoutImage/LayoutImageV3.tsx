@@ -20,7 +20,7 @@ const LayoutImageV3 = ({ children, image }: ILayoutImageProps) => {
         width={1080}
       />
       <div className="h-full flex flex-col w-full ">
-        <div className="flex flex-col justify-start items-start h-full w-full pb-14">
+        <div className="flex flex-col justify-start items-start h-full w-full pb-14 pl-5">
           {children}
         </div>
       </div>

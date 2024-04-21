@@ -7,7 +7,7 @@ interface ITextInputProps extends IExtendablesWithChildren<HTMLInputElement> {
   placeholder?: string;
   props?: React.InputHTMLAttributes<HTMLInputElement>;
   value?: string;
-  type?: 'text' | 'password' | 'email' | 'tel';
+  type?: 'text' | 'password' | 'email' | 'tel' | 'number';
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 

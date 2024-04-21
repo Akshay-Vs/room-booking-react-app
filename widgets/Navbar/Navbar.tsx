@@ -1,6 +1,7 @@
-import { Button, LogoIcon, Typography } from '@/shared/components';
+import { LogoIcon, Typography } from '@/shared/components';
 import Link from 'next/link';
 import React from 'react';
+import LoginProfileButton from './LoginProfileButton';
 
 const Navbar = () => {
   return (
@@ -25,10 +26,7 @@ const Navbar = () => {
           Community
         </Typography.Heading>
       </Typography>
-
-      <Link href="/login">
-        <Button className="scale-[80%]">Login</Button>
-      </Link>
+      <LoginProfileButton />
     </nav>
   );
 };

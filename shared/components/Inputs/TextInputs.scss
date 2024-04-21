@@ -30,6 +30,7 @@
 
   &__input-area {
     font-size: 20px;
+    min-height: 84px;
   }
   &__input-logo {
     @include font-primary(22px, 400);

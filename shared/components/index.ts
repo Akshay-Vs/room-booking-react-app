@@ -11,6 +11,7 @@ import ServiceCard from './Cards/ServiceCard/ServiceCard';
 import ProductCard from './Cards/ProductCard/ProductCard';
 import ImageUploader from './ImageUploader/ImageUploader';
 import UserProfile from './UserProfile/UserProfile';
+import ImageUploaderFull from './ImageUploader/ImageUploaderFull';
 
 export {
   Typography,
@@ -24,4 +25,5 @@ export {
   ProductCard,
   ImageUploader,
   UserProfile,
+  ImageUploaderFull,
 };
